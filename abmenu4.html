@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<style>
+.dn {width:80px; height:80px; background-repeat:;}
+</style>
+<script> 
+$(document).ready(function(){
+	
+// square menu actions 	
+
+  $("#menu1").click(function(){
+	  	   
+	$("#menu1").animate({left:'0px', top:'50px', width:'110px', height:'110px'});
+	
+	$("#menu2").animate({left:'0px', top:'200px', width:'110px', height:'110px'});
+	
+	$("#menu3").animate({left:'0px', top:'350px', width:'110px', height:'110px'});
+	
+  });
+  
+  $("#menu2").click(function(){
+	  	   
+	$("#menu1").animate({left:'0px', top:'50px', width:'110px', height:'110px'});
+	
+	$("#menu2").animate({left:'0px', top:'200px', width:'110px', height:'110px'});
+	
+	$("#menu3").animate({left:'0px', top:'350px', width:'110px', height:'110px'});
+	
+  });
+  
+  $("#menu3").click(function(){
+	  	   
+	$("#menu1").animate({ top:'50px', left:'0px', width:'110px', height:'110px'});
+	
+	
+	$("#menu2").animate({ top:'200px',left:'0px', width:'110px', height:'110px'});
+	
+	$("#menu3").animate({ top:'350px',left:'0px', width:'110px', height:'110px'});
+	
+  });
+  
+// actions for different content divisions
+
+$("#menu1").click(function(){
+   $("#contx").show("fast");
+   $("#bir").show("slow");
+   $("#iki").hide("slow");
+   $("#uc").hide("slow");
+  });
+$("#menu2").click(function(){
+   $("#contx").show("fast");
+   $("#bir").hide("slow");
+   $("#iki").show("slow");
+   $("#uc").hide("slow");
+  });
+$("#menu3").click(function(){
+   $("#contx").show("fast");
+   $("#bir").hide("slow");  
+   $("#iki").hide("slow");
+   $("#uc").show("slow");
+  });
+  
+// actions for "x" close  
+  
+$("#closex, #closey, #closez ").click(function(){
+	
+window.open('abmenu4.html','_self' );
+//window.location = abmenu2.html;
+//$("#contx").fadeOut();
+//	$("#bir").hide();
+//	$("#iki").hide();
+//	$("#uc").hide();
+//    $("#menux").fadeIn();
+  });
+
+// changes background images  
+
+var bgimages = ['bg1.jpg', 'bg2.jpg'];
+$('body').css({'background-image': 'url(img/bg/' + bgimages[Math.floor(Math.random() * bgimages.length)] + ')',"background-size":"100%", "background-repeat":"no-repeat"});
+ 
+});
+</script> 
+
+<script>
+function show(target){
+document.getElementById(target).style.visibility = 'visible';
+}
+function hide(target){
+document.getElementById(target).style.visibility = 'hidden';
+}
+</script>
+
+</head>
+ 
+<body style="" >
+<p>&nbsp;</p>
+
+
+<div id="menu1" style="background: #98bf21; height: 200px; width: 200px; position:absolute; top:250px; left:100px;"></br>
+</br>
+</div>
+
+<div id="menu2" style="background: #56dd50; height: 200px; width: 200px; position:absolute; top:250px; left:350px;"></br>
+</br>
+</div>
+
+<div id="menu3" style="background: #999; height: 200px; width: 200px; position:absolute; top:250px; left:600px;"><br>
+<br>
+</div>
+
+<div id="contx" style="position: absolute; left:200px;">
+<div id="bir" style="width:150px; height:150px; display:none; float:left; background: rgba(255, 255, 255, .5); ">
+  <a href="#" id="closex">x</a>
+  <p>111111111111111111111111111111111 </p>
+  <p>&nbsp;</p>
+  <p>id si bir rakam ile 1</p>
+</div>
+
+<div id="iki" style="width:150px; height:150px; display:none; float:left; background: rgba(255, 255, 255, .5);">
+  <a href="#" id="closey">x</a>
+  <p>222222222222222222222222222222222 </p>
+  <p>idsi iki</p>
+</div>
+
+<div id="uc" style="width:150px; height:150px; display:none; float:left; background: rgba(255, 255, 255, .5);">
+  <a href="#" id="closez">x</a>
+  <p>333333333333333333333333333333333 </p>
+  <p>idsi uc</p>
+</div>
+</div>
+
+</body>
+</html>

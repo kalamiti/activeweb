@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<style>
+a { display: block; height: 100px; width: 100px; background-color: red;}
+a.selected { background-color: blue;   height:50px;}
+a.selected:after {content:"selected";}
+</style>
+
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+$('nav a').click(function() {
+  $('sayfa2.html nav a.min').removeClass( "min" );
+  $("nav a").removeClass( "selected");
+  $(this).addClass( "selected" );
+ });   
+ });
+</script>
+
+
+
+</head>
+
+<body>
+
+<nav>
+    <a class="selected" href="sayfa2.html">1</a>
+    <a href="#">2</a>
+    <a href="#">4</a>
+    <a href="#">3</a>
+</nav>
+
+</body>
+</html>

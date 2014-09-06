@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+ <meta name="viewport" content="width=device-width">
+<style>
+@media screen and (min-width:769px) and (max-width:980px){
+	* {padding:0; margin:0;}
+nav { background-color: rgba(57, 64, 88, .3);; display:none;  }
+
+}
+
+}
+ul li:first-child {font-size:1em;}
+
+ul li:last-child { font-size:16px;}
+
+#o ul li:first-child {font-size:0.75em;}
+
+#o ul li:last-child { font-size:12px;}
+
+</style>
+
+
+<link href="css/messstyle.less" rel="stylesheet/less" />
+<script type="text/javascript" src="js/less-1.4.1.min.js"></script>
+
+</head>
+
+<body>
+<div id="r"><div id="kapan" style="display:none;">
+
+
+    <div style=" border-bottom:3px solid grey; margin-bottom:5px;"></div>
+    <div style=" border-bottom:3px solid grey;  margin-bottom:5px"></div>
+    <div style=" border-bottom:3px solid grey;"></div>
+</div></div>
+<nav id="n" style="z-index:1000;">
+    <ul>
+        <li>first second 16px (1em)</li>
+        <li> first second 16px</li>
+    </ul>
+</nav>
+<div id="o" style="z-index:0;">
+    <ul>
+        <li>first secon 12px (0.75em)</li>
+        <li> first second 12px</li>
+    </ul>
+</div>
+<br />
+
+<a href="sms://?body=Visit%20the%20best%20site%20at%20http://www.activebuilder.com" style="display:none;">
+Invite a friend by SMS<a>
+<br />
+
+<a href="sms://+905304440400">Contact us by SMS</a>
+<br />
+
+<a href="sms://+905304440400?body=Interested%20in%20Product" style="display:none;">
+More info for producto AA2</a>
+<br />
+<br />
+<a href="sms:555:body=hello">Tap to say hello!</a>
+<br />
+<br />
+
+
+
+<br />
+<br />
+
+<a id="this" href="#" onclick="hide()">
+hide on click please </a>
+<div id="sh" style="width:200px; height:150px; background-color:red;"></div>
+<br />
+<br />
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#r, #o").click(function () {
+		$("#n").slideToggle();
+		 });
+    });
+</script>
+<script src="js/modernizr-2.6.2.min.js"></script>
+
+</body>
+</html>
